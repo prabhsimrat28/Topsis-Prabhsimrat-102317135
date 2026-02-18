@@ -1,13 +1,33 @@
-# Topsis-Prabhsimrat-102317135
-This project implements the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) method for multi-criteria decision making.
+# TOPSIS – Technique for Order Preference by Similarity to Ideal Solution
 
-The program accepts an input CSV file containing alternatives and criteria values, along with user-defined weights and impacts, and computes:
+TOPSIS is a Multi-Criteria Decision Making (MCDM) method developed in the 1980s.  
+It selects the best alternative based on:
 
-1. Normalized decision matrix
-2. Weighted normalized matrix
-3. Ideal best and ideal worst solutions
-4. TOPSIS score for each alternative
-5. Final ranking of alternatives
+- Shortest Euclidean distance from the Ideal Solution
+- Farthest distance from the Negative-Ideal Solution
 
-The solution is implemented as a command-line tool and is also published as a Python package on PyPI.
-Here is the link for the PyPI package : https://pypi.org/project/Topsis-Prabhsimrat-102317135/1.0.0/
+---
+
+## Installation
+
+Install directly from PyPI:
+
+## Usage
+
+After installation, open your terminal and run:
+topsis <InputDataFile> <Weights> <Impacts> <OutputFile>
+
+
+### Example:
+
+topsis test.csv "1,1,2,3,1" "+,-,+,-,-" output.csv
+
+## Output
+
+The output file will contain:
+
+- Original data
+- Topsis Score
+- Rank (1 = Best Alternative)
+
+---
